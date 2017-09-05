@@ -4,7 +4,7 @@ Neural machine translation implementation using [dynet](https://github.com/clab/
 
 Example Usage:
 ~~~~
-python dynmt.py --dynet-autobatch 0 --dynet-gpu-ids 1 --dynet-mem 12000 \
+python dynmt.py --dynet-autobatch 0 --dynet-gpus 1 --dynet-mem 12000 \
 --input-dim=500 --hidden-dim=1024 --epochs=100 --lstm-layers=1 --optimization=ADADELTA \
 --batch-size=60 --beam-size=5 --vocab 30000 --plot --eval-after=10000  \
 train_source.txt train_target.txt dev_source.txt dev_target.txt test_source.txt test_target.txt path/to/model/dir
@@ -16,7 +16,7 @@ Name|Description
 --- | ---
   -h --help        |             shows a help message and exits
   --dynet-mem MEM      |         allocates MEM bytes for dynet
-  --dynet-gpu-ids IDS  |         GPU ids to use
+  --dynet-gpus IDS  |         CPU/GPU ids to use
   --dynet-autobatch AUTO   |     switch auto-batching on
   --input-dim=INPUT      |       input embeddings dimension [default: 300]
   --hidden-dim=HIDDEN     |      LSTM hidden layer dimension [default: 100]
